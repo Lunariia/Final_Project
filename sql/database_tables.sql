@@ -6,7 +6,7 @@ create table Users
 	(
 		id bigint auto_increment,
 		login varchar(60) not null,
-		password varchar(20) not null,
+		password varchar(40) not null,
 		role varchar(10),
 		first_name varchar(20) not null,
 		last_name varchar(40) not null,
@@ -31,7 +31,8 @@ create table Prescriptions
 		user_id bigint not null,
 		medicine_id bigint not null,
 		start_date date,
-		continious date,
+		end_date date,
+		access boolean,
 		primary key (id),
 		foreign key (user_id) references Users (id),
 		foreign key (medicine_id) references Medicines (id)
@@ -43,7 +44,7 @@ create table Purchases
 		user_id bigint not null,
 		medicine_id bigint not null,
 		amount int not null,
-		date_of_perchase varchar(20),
+		date_of_purchase varchar(20),
 		primary key (id),
 		foreign key (user_id) references Users (id),
 		foreign key (medicine_id) references Medicines (id)
@@ -51,3 +52,4 @@ create table Purchases
 
 
 	create index name_index on Users (login);
+    alter table prescriptions add column access boolean not null default 0;

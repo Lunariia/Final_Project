@@ -5,8 +5,8 @@ import com.epam.pharmacy.command.CommandFactory;
 import com.epam.pharmacy.command.CommandResult;
 import com.epam.pharmacy.connection.ConnectionPool;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.PageNotFoundException;
-import com.google.protobuf.ServiceException;
+import com.epam.pharmacy.logic.NotFoundException;
+import com.epam.pharmacy.logic.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,12 +22,12 @@ public class MedicalController extends HttpServlet {
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         process(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         process(req, resp);
     }
 
@@ -45,7 +45,10 @@ public class MedicalController extends HttpServlet {
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher(page);
                 requestDispatcher.forward(req, resp);
             }
-        } catch (ServiceException | ServletException | IOException | com.epam.pharmacy.logic.ServiceException e) {
+        } catch (NotFoundException e) {
+            LOGGER.debug(e);
+            resp.sendError(404);
+        } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
             resp.sendError(500);
         }

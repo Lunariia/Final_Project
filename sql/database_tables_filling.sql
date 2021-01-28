@@ -1,13 +1,13 @@
 	use pharmacy;
 
 	insert into Users(login,password,role,first_name,last_name,balance)
-	values('firstUser','first','CUSTOMER','Andrei','Ermalaev',100),
-		  ('secondUser','second','CUSTOMER','Maria','Andreichuc',100),
-		  ('thirsUser','third','CUSTOMER','Jordan','Gardner',100),
-		  ('forthUser','forth','CUSTOMER','Donald','Edwards',100),
-		  ('fifthUser','fifth','CUSTOMER','Oswald','Jackson',100),
-		  ('doctorUser','doctor','DOCTOR','Zoe','Small',100),
-		  ('emloyeeUser','emloyee','WORKER','Julian','Bryan',100);
+	values('firstUser',SHA1('first'),'CUSTOMER','Andrei','Ermalaev',100),
+		  ('secondUser',SHA1('second'),'CUSTOMER','Maria','Andreichuc',100),
+		  ('thirdUser',SHA1('third'),'CUSTOMER','Jordan','Gardner',100),
+		  ('forthUser',SHA1('forth'),'CUSTOMER','Donald','Edwards',100),
+		  ('fifthUser',SHA1('fifth'),'CUSTOMER','Oswald','Jackson',100),
+		  ('doctorUser',SHA1('doctor'),'DOCTOR','Zoe','Small',100),
+		  ('emloyeeUser',SHA1('emloyee'),'WORKER','Julian','Bryan',100);
 
 	insert into Medicines(title,dosage,cost,formula,quantity)
 	values('Alprazolam',0.7,10.30,1,10),
@@ -19,5 +19,8 @@
 		  ('Biseptolum',0.6,3.20,0,10),
 		  ('Витабакт',0.1,5.60,0,10);
 
-insert into Prescriptions(user_id,medicine_id,start_date,continious)
+insert into Prescriptions(user_id,medicine_id,start_date,end_date)
 values(1,6,DATE_FORMAT('12-06-20','%d/%m/%y'),DATE_FORMAT('12-06-21','%d/%m/%y'));
+
+insert into Prescriptions(user_id,medicine_id,start_date,end_date)
+values(9,2,DATE_FORMAT('25-01-21','%d/%m/%y'),DATE_FORMAT('25-01-22','%d/%m/%y'));

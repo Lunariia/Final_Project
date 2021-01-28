@@ -1,6 +1,8 @@
 package com.epam.pharmacy.logic;
 
-public class PageNotFoundException extends ServiceException{
+import com.epam.pharmacy.logic.ServiceException;
+
+public class PageNotFoundException extends ServiceException {
 
     public PageNotFoundException() {
         super();

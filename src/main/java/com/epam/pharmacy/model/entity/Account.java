@@ -1,18 +1,20 @@
 package com.epam.pharmacy.model.entity;
 
+import com.epam.pharmacy.model.Identifiable;
+
 import java.util.Objects;
 
-public class Account {
+public class Account implements Identifiable {
 
-    private final long id;
+    private final Long id;
     private final String login;
     private final String password;
-    private String role;
+    private Role role;
     private final String firstName;
     private final String lastName;
     private long balance;
 
-    public Account(long id, String login, String password, String role, String firstName, String lastName, long balance) {
+    public Account(Long id, String login, String password, Role role, String firstName, String lastName, long balance) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -22,7 +24,8 @@ public class Account {
         this.balance = balance;
     }
 
-    public long getId() {
+    @Override
+    public Long getId() {
         return id;
     }
 
@@ -34,7 +37,7 @@ public class Account {
         return password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
@@ -63,9 +66,9 @@ public class Account {
                 balance == account.balance &&
                 login.equals(account.login) &&
                 password.equals(account.password) &&
-                role.equals(account.role) &&
-                firstName.equals(account.firstName) &&
-                lastName.equals(account.lastName);
+                role == account.role &&
+                Objects.equals(firstName, account.firstName) &&
+                Objects.equals(lastName, account.lastName);
     }
 
     @Override

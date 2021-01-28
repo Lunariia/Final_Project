@@ -7,4 +7,6 @@ import java.util.Optional;
 public interface UserDao{
 
     Optional<Account> findByCredentials(String login,String password) throws DaoException;
+
+    Long updateBalance(Double balance,Long id) throws DaoException;
 }
