@@ -1,5 +1,6 @@
 package com.epam.pharmacy.dao;
 
+import com.epam.pharmacy.dao.exception.DaoException;
 import com.epam.pharmacy.logic.mapper.RowMapper;
 import com.epam.pharmacy.model.Identifiable;
 
@@ -44,17 +45,6 @@ public abstract class AbstractDao<T extends Identifiable> implements Dao<T> {
             }
         } catch (SQLException e) {
             throw new DaoException(e);
-        }
-    }
-
-    @Override
-    public void close() throws DaoException {
-        if (connection != null) {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new DaoException(e);
-            }
         }
     }
 

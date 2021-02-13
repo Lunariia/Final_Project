@@ -3,17 +3,12 @@ package com.epam.pharmacy.command;
 import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.MedicineService;
-import com.epam.pharmacy.logic.NotFoundException;
-import com.epam.pharmacy.logic.ServiceException;
-import com.epam.pharmacy.model.entity.Account;
+import com.epam.pharmacy.logic.medicine.MedicineService;
+import com.epam.pharmacy.logic.exception.NotFoundException;
 import com.epam.pharmacy.model.entity.Medicine;
-import com.epam.pharmacy.model.entity.Prescription;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
-import java.util.Optional;
 
 public class MedicineCommand implements Command {
 

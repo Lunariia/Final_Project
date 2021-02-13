@@ -1,6 +1,6 @@
 package com.epam.pharmacy.command;
 
-import com.epam.pharmacy.logic.ServiceException;
+import com.epam.pharmacy.logic.exception.ServiceException;
 
 import javax.servlet.http.HttpServletRequest;
 

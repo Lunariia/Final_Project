@@ -53,6 +53,7 @@ public class ConnectionPool {
         return instance;
     }
 
+
     public Connection getConnection() throws ConnectionPoolException {
         try {
             return connections.take();

@@ -9,6 +9,7 @@ public class CommandName {
     public static final String LOGIN = "login";
     public static final String LOGOUT = "logout";
     public static final String LOGIN_PAGE = "loginPage";
+    public static final String HOME_PAGE = "homePage";
 
     public static final String ABOUT_US_PAGE = "aboutUs";
     public static final String CONTACTS_PAGE = "contacts";

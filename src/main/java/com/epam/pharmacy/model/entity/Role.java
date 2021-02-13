@@ -14,7 +14,8 @@ public enum Role {
                     CommandName.LOGIN_PAGE,
                     CommandName.ABOUT_US_PAGE,
                     CommandName.CONTACTS_PAGE,
-                    CommandName.DEPARTMENTS_PAGE
+                    CommandName.DEPARTMENTS_PAGE,
+                    CommandName.SIGN_IN
             )
     ),
     CUSTOMER(
@@ -22,7 +23,15 @@ public enum Role {
                     CommandName.HOME,
                     CommandName.LOCALIZATION,
                     CommandName.LOGIN,
-                    CommandName.LOGIN_PAGE
+                    CommandName.LOGIN_PAGE,
+                    CommandName.CREATE_PRESCRIPTION_PAGE,
+                    CommandName.ACCOUNT_PRESCRIPTIONS,
+                    CommandName.GET_PRESCRIPTION,
+                    CommandName.CREATE_PRESCRIPTION,
+                    CommandName.ORDER_PAGE,
+                    CommandName.ORDER,
+                    CommandName.PURCHASES_PAGE,
+                    CommandName.MY_PURCHASES
             )
     ),
     DOCTOR(
@@ -40,7 +49,10 @@ public enum Role {
                     CommandName.LOCALIZATION,
                     CommandName.LOGOUT,
                     CommandName.CREATE_MEDICINE,
-                    CommandName.DELETE_MEDICINE
+                    CommandName.MEDICINE,
+                    CommandName.DELETE_MEDICINE,
+                    CommandName.SAVE_MEDICINE,
+                    CommandName.EDIT_MEDICINE_PAGE
             )
     );
 

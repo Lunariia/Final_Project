@@ -2,7 +2,7 @@ package com.epam.pharmacy.dao.manager;
 
 import com.epam.pharmacy.connection.ConnectionPool;
 import com.epam.pharmacy.connection.ConnectionPoolException;
-import com.epam.pharmacy.dao.DaoException;
+import com.epam.pharmacy.dao.exception.DaoException;
 
 import java.sql.Connection;
 

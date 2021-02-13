@@ -3,8 +3,8 @@ package com.epam.pharmacy.command;
 import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.NotFoundException;
-import com.epam.pharmacy.logic.PrescriptionService;
+import com.epam.pharmacy.logic.exception.NotFoundException;
+import com.epam.pharmacy.logic.prescription.PrescriptionService;
 import com.epam.pharmacy.model.entity.Prescription;
 
 import javax.servlet.http.HttpServletRequest;

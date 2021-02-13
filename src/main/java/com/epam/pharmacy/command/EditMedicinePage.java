@@ -3,7 +3,7 @@ package com.epam.pharmacy.command;
 import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.MedicineService;
+import com.epam.pharmacy.logic.medicine.MedicineService;
 import com.epam.pharmacy.model.entity.Medicine;
 
 import javax.servlet.http.HttpServletRequest;

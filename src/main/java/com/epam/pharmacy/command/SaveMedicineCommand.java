@@ -2,7 +2,7 @@ package com.epam.pharmacy.command;
 
 import com.epam.pharmacy.constants.CommandName;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.MedicineService;
+import com.epam.pharmacy.logic.medicine.MedicineService;
 import com.epam.pharmacy.model.entity.Medicine;
 
 import javax.servlet.ServletContext;

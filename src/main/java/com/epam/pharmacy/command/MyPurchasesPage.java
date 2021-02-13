@@ -3,8 +3,8 @@ package com.epam.pharmacy.command;
 import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.NotFoundException;
-import com.epam.pharmacy.logic.PurchaseStoryService;
+import com.epam.pharmacy.logic.exception.NotFoundException;
+import com.epam.pharmacy.logic.purchaseStory.PurchaseStoryService;
 import com.epam.pharmacy.model.entity.Account;
 import com.epam.pharmacy.model.entity.PurchaseStory;
 
@@ -16,6 +16,7 @@ public class MyPurchasesPage implements Command {
 
     private final PurchaseStoryService purchaseStoryService;
     private static final int DEFAULT_PAGE = 1;
+    private static final int DEFAULT_NUMBER_PAGE = 1;
     private static final int DEFAULT_ITEMS_PER_PAGE = 8;
 
     public MyPurchasesPage(PurchaseStoryService purchaseStoryService) {

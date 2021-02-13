@@ -1,11 +1,12 @@
 package com.epam.pharmacy.dao;
 
+import com.epam.pharmacy.dao.exception.DaoException;
 import com.epam.pharmacy.model.Identifiable;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface Dao<T extends Identifiable> extends AutoCloseable {
+public interface Dao<T extends Identifiable> {
 
     List<T> getAll() throws DaoException;
 
@@ -15,6 +16,4 @@ public interface Dao<T extends Identifiable> extends AutoCloseable {
 
     void delete(long id) throws DaoException;
 
-    @Override
-    void close() throws Exception;
 }

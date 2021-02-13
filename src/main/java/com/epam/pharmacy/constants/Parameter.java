@@ -17,7 +17,6 @@ public class Parameter {
     public static final String PRESCRIPTION = "prescription";
     public static final String QUANTITY = "quantity";
     public static final String BALANCE = "balance";
-
     public static final String MEDICINE_ID = "medicineId";
     public static final String USER_ID = "userId";
     public static final String START_DATE = "startDate";

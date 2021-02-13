@@ -1,14 +1,10 @@
 package com.epam.pharmacy.command;
 
-import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.CommandName;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.AccountService;
-import com.epam.pharmacy.logic.PrescriptionService;
-import com.epam.pharmacy.logic.PurchaseService;
-import com.epam.pharmacy.model.entity.Account;
-import com.epam.pharmacy.model.entity.Medicine;
-import com.epam.pharmacy.model.entity.Purchase;
+import com.epam.pharmacy.logic.account.AccountService;
+import com.epam.pharmacy.logic.prescription.PrescriptionService;
+import com.epam.pharmacy.logic.purchase.PurchaseService;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;

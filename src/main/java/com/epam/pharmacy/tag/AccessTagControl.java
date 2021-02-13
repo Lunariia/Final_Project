@@ -12,6 +12,10 @@ public class AccessTagControl extends TagSupport {
 
     private String accessName;
 
+    public void setAccessName(String accessName) {
+        this.accessName = accessName;
+    }
+
     @Override
     public int doStartTag() throws JspException {
         HttpSession session = pageContext.getSession();

@@ -4,9 +4,8 @@ package com.epam.pharmacy.command;
 import com.epam.pharmacy.constants.Attribute;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.NotFoundException;
-import com.epam.pharmacy.logic.PurchaseService;
-import com.epam.pharmacy.model.entity.Medicine;
+import com.epam.pharmacy.logic.exception.NotFoundException;
+import com.epam.pharmacy.logic.purchase.PurchaseService;
 import com.epam.pharmacy.model.entity.Purchase;
 
 import javax.servlet.http.HttpServletRequest;

@@ -1,8 +1,11 @@
 package com.epam.pharmacy.dao.manager;
 
-import com.epam.pharmacy.dao.*;
-import com.epam.pharmacy.model.entity.Prescription;
-import com.epam.pharmacy.model.entity.PurchaseStory;
+import com.epam.pharmacy.dao.exception.DaoException;
+import com.epam.pharmacy.dao.medicine.MedicineDao;
+import com.epam.pharmacy.dao.prescription.PrescriptionDao;
+import com.epam.pharmacy.dao.purchase.PurchaseDao;
+import com.epam.pharmacy.dao.purchase.story.PurchaseStoryDao;
+import com.epam.pharmacy.dao.user.UserDao;
 
 public interface DaoConnectionManager extends AutoCloseable {
 

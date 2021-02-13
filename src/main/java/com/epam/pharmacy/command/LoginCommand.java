@@ -1,11 +1,10 @@
  package com.epam.pharmacy.command;
 
 import com.epam.pharmacy.constants.Attribute;
-import com.epam.pharmacy.constants.CommandName;
 import com.epam.pharmacy.constants.Page;
 import com.epam.pharmacy.constants.Parameter;
-import com.epam.pharmacy.logic.ServiceException;
-import com.epam.pharmacy.logic.AccountService;
+import com.epam.pharmacy.logic.exception.ServiceException;
+import com.epam.pharmacy.logic.account.AccountService;
 import com.epam.pharmacy.model.entity.Account;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +13,7 @@ import java.util.Optional;
 
 public class LoginCommand implements Command {
 
-    private static final String ERROR_MASSAGE = "Invalid data";
+    private static final String ERROR_MASSAGE = "User not found,please,check your input!";
     private final AccountService accountService;
 
     public LoginCommand(AccountService accountService) {

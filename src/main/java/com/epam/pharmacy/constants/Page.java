@@ -18,6 +18,7 @@ public class Page {
     public static final String MEDICINES_PAGE = "WEB-INF/view/medicinePage.jsp";
     public static final String PURCHASES_PAGE = "WEB-INF/view/purchasePage.jsp";
     public static final String ORDER_PAGE = "WEB-INF/view/myOrderPage.jsp";
+    public static final String MESSAGE_PAGE = "WEB-INF/view/messagePage.jsp";
 
     public static final String MEDICINE_EDITOR = "WEB-INF/view/medicineItemPage.jsp";
 
